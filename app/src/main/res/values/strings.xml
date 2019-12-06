@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoteBookClient Android</string>
+    <string name="neue_notiz">Neue Notiz</string>
+    <string name="neu_laden">Neu Laden</string>
+    <string name="headline">Notiz Titel</string>
+    <string name="notizen">Notizen</string>
+</resources>

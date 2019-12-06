@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_menu_new_note"
+        android:title="@string/neue_notiz" />
+    <item
+        android:id="@+id/main_menu_reload"
+        android:title="@string/neu_laden" />
+</menu>
