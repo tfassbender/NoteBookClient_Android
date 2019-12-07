@@ -1,4 +1,4 @@
-package net.jfabricationgames.notebookclientandroid.activity;
+package net.jfabricationgames.notebook.client.android.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
