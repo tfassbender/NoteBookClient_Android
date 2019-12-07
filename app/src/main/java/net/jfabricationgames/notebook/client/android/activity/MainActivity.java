@@ -10,9 +10,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import net.jfabricationgames.notebook.client.controll.NoteClient;
+import net.jfabricationgames.notebook.client.error.NoteBookException;
+import net.jfabricationgames.notebook.note.Note;
+import net.jfabricationgames.notebook.note.NoteSelector;
 import net.jfabricationgames.notebookclientandroid.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,17 +29,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         listViewNotes = (ListView) findViewById(R.id.listViewNotes);
-
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("text");
-        list.add("another text");
-        list.add("more text");
-
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list);
-
-        listViewNotes.setAdapter(adapter);
-
         listViewNotes.setOnItemClickListener((listView, view, position, id) -> noteSelected(listView, position));
+
+        NoteClient noteClient = new NoteClient();
+        try {
+            /*ArrayList<String> list = new ArrayList<String>();
+            list.add("text");
+            list.add("another text");
+            list.add("more text");*/
+
+            List<Note> notes = noteClient.getNotes(NoteSelector.empty());
+            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, notes);
+            listViewNotes.setAdapter(adapter);
+        }
+        catch (NoteBookException e) {
+            e.printStackTrace();
+        }
     }
 
     private void noteSelected(AdapterView listView, int position) {

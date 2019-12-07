@@ -31,8 +31,11 @@ dependencies {
     implementation "org.glassfish.jersey.inject:jersey-hk2:2.26"
     implementation "org.apache.logging.log4j:log4j-api:2.11.0"
     implementation "org.apache.logging.log4j:log4j-core:2.11.0"
+    annotationProcessor "org.apache.logging.log4j:log4j-core:2.11.0"
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7"
     implementation "javax.servlet:servlet-api:2.5"
+
+
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
