@@ -1,41 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
-    <EditText
-        android:id="@+id/editTextHeadline"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="@string/headline"
-        android:inputType="textPersonName" />
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-    <EditText
-        android:id="@+id/editTextNoteContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:hint="@string/notizen"
-        android:inputType="textMultiLine"
-        android:scrollbars="vertical" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="date" />
+            <EditText
+                android:id="@+id/editTextHeadline"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/spinnerPriority"
+                android:ems="10"
+                android:hint="@string/headline"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="time" />
-</LinearLayout>
+            <Spinner
+                android:id="@+id/spinnerPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"/>
+
+            <EditText
+                android:id="@+id/editTextNoteContent"
+                android:layout_width="match_parent"
+                android:layout_height="329dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editTextHeadline"
+                android:ems="10"
+                android:hint="@string/notizen"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical" />
+
+            <DatePicker
+                android:id="@+id/editTextExecutionDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView" />
+
+            <TimePicker
+                android:id="@+id/editTextExecutionTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editTextExecutionDate" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editTextNoteContent"
+                android:text="@string/notiz_datum" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editTextExecutionTime"
+                android:text="@string/erinnerungsdatum" />
+
+            <DatePicker
+                android:id="@+id/editTextReminderDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView2" />
+
+            <TimePicker
+                android:id="@+id/editTextReminderTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editTextReminderDate" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

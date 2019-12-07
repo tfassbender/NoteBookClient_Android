@@ -4,4 +4,8 @@
     <string name="neu_laden">Neu Laden</string>
     <string name="headline">Notiz Titel</string>
     <string name="notizen">Notizen</string>
+    <string name="datum">Datum</string>
+    <string name="zeit">Zeit</string>
+    <string name="notiz_datum">Notiz Datum (nächstes)</string>
+    <string name="erinnerungsdatum">Erinnerungsdatum (nächstes)</string>
 </resources>

@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/note_menu_delete_note"
+        android:title="Notiz Löschen" />
+    <item
+        android:id="@+id/note_menu_delete_execution_date"
+        android:title="Datum Löschen" />
+    <item
+        android:id="@+id/note_menu_delete_reminder_date"
+        android:title="Erinnerung Löschen" />
 </menu>
