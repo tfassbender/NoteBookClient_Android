@@ -1,4 +1,4 @@
-package net.jfabricationgames.notebookclientandroid;
+package net.jfabricationgames.notebookclientandroid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import net.jfabricationgames.notebookclientandroid.R;
 
 import java.util.ArrayList;
 
